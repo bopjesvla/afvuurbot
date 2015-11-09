@@ -15,7 +15,6 @@ public class Control {
 //	private ColorControl ccl;
 //	private ColorControl ccr;
 	private PoseControl mc;
-	private GyroControl gc;
 	
 	private int orientation = 0;
 	
@@ -27,8 +26,7 @@ public class Control {
 //        hc = new HeadControl(SensorPort.S2);
 //        ccl = new ColorControl(SensorPort.S3);
 //        ccr = new ColorControl(SensorPort.S4);
-        gc = new GyroControl(SensorPort.S1);
-        mc = new PoseControl(new EV3LargeRegulatedMotor(MotorPort.C), new EV3LargeRegulatedMotor(MotorPort.D), gc);
+        mc = new PoseControl(new EV3LargeRegulatedMotor(MotorPort.C), new EV3LargeRegulatedMotor(MotorPort.D));
         
         // RegulatedMotor color = new NXTRegulatedMotor(MotorPort.B);
         //color.rotateTo(0);

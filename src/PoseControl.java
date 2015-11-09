@@ -16,7 +16,7 @@ public class PoseControl {
 	
 	// MapControl map = new MapControl(this);
 	
-	public PoseControl(RegulatedMotor c, RegulatedMotor d, GyroControl g) {
+	public PoseControl(RegulatedMotor c, RegulatedMotor d) {
 		this.c = c;
 		this.d = d;
 		
@@ -33,7 +33,7 @@ public class PoseControl {
 		
 		while (i-->0) {
 			c.setSpeed(maxspeed*80/100);
-			c.rotateTo(10000);
+			c.rotateTo(20000-i*1000);
 			c.setSpeed(maxspeed*80/100);
 			c.rotateTo(0);
 		}
